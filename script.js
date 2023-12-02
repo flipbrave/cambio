@@ -17,7 +17,7 @@ async function atualizarCotacao() {
     const valor = valorInput.value;
 
     if (!valor || isNaN(valor)) {
-        cotacaoResultado.textContent = 'Por favor, insira um valor para a conversão';
+        cotacaoResultado.textContent = 'Por favor, insira um valor para a conversão em Real';
         return;
     }
 
@@ -28,7 +28,7 @@ async function atualizarCotacao() {
         cotacaoResultado.textContent = `${cotacao}`;
     } catch (error) {
         console.error('Erro ao obter cotação:', error);
-        cotacaoResultado.textContent = 'Erro ao obter cotação. Tente novamente mais tarde.';
+        cotacaoResultado.textContent = 'Erro de cotação. Use um número válido.';
     }
 }
 
